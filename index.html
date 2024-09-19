@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions for New Users in EhTeam.">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <meta name="author" content="TheCoolDoggo">
+    <title>NickEh30 & EhTeam FAQ's</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="NickEh30 & EhTeam FAQ's">
+    <meta property="og:description" content="Frequently Asked Questions for New Users in EhTeam.">
+    <meta property="og:url" content="https://customtracker.tech/">
+    <meta property="og:image" content="https://customtracker.tech/images/preview.png">
+    <meta property="og:type" content="website">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #121212, #380343);
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header {
+            background: linear-gradient(to bottom left, #f1abc0, #d72733, #380343);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        main {
+            padding: 20px;
+        }
+        #faq {
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 3px solid #d92531;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .faq-item {
+            margin-bottom: 10px;
+        }
+        .faq-question {
+            background: #333333;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+            role: button;
+            aria-expanded: false;
+        }
+        .faq-question:hover {
+            background: #444444;
+            transform: scale(1.025);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 10px;
+            background: #444444;
+            border-radius: 4px;
+            margin-top: 5px;
+            text-align: left;
+            opacity: 0;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+        .faq-answer.visible {
+            max-height: 500px;
+            opacity: 1;
+            padding: 10px;
+        }
+        .faq-answer p {
+            margin: 0;
+        }
+        .faq-answer img {
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: linear-gradient(to bottom right, #f1abc0, #d72733, #380343);
+            color: #fff;
+            margin-top: 20px;
+            border-radius: 8px 8px;
+        }
+        button {
+            background: linear-gradient(to bottom left, #f1abc0, #d72733, #380343);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 14px;
+        }
+        button:hover {
+            transform: scale(1.02);
+        }
+        #mentions-count {
+            font-size: 1.5em;
+            background: linear-gradient(to bottom, red, rgb(74, 39, 163));
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+        }
+        #total-mentions {
+            margin: 0;
+            padding: 0;
+            padding-bottom: .3em;
+        }
+        .top-user-name {
+            font-weight: bold;
+        }
+        .top-user-count {
+            background: linear-gradient(to bottom, red, rgb(74, 39, 163));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+        .highlight {
+            background: linear-gradient(to bottom left, #f1abc0, #d72733, #380343);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-out {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-out.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        a {
+            color: #d72733;
+            text-decoration: none;
+        }
+        .youtube-video {
+            width: 100%;
+            height: 315px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            padding-top: 7px;
+            loading: lazy;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                top: 10px;
+                padding: 10px;
+            }
+            header {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            main {
+                padding: 10px;
+            }
+            .faq-question {
+                padding: 8px;
+            }
+            .faq-answer {
+                padding: 0 8px;
+            }
+            .faq-answer.visible {
+                padding: 8px;
+            }
+            footer {
+                padding: 10px;
+            }
+            button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body class="parallax">
+    <div class="wrapper">
+        <div class="container">
+            <header>
+                <h1>EhTeam Frequently Asked Questions</h1>
+            </header>
+            <main>
+                <section id="faq" class="fade-in">
+                    <h2>I've noticed a lot of new people ask the same questions, so I've combined the FAQ's here for your convenience!</h2>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">How can I play in customs?</div>
+                        <div class="faq-answer">
+                            <p>Watch this tutorial for the easiest guide!</p>
+                            <iframe class="youtube-video" src="https://www.youtube.com/embed/bpxajKNLSUA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>To play in most customs, you have to be a <em>paid</em> subscriber in NickEh30's chat.</p>
+                            <p>Note: A longer text explation is avaible in the description in the above video</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">What is NickEh30's Discord?</div>
+                        <div class="faq-answer">
+                            <p>You can join NickEh30's Discord <a href="https://discord.gg/nickeh30">Here</a>. <img src="https://cdn.discordapp.com/emojis/790794998299361303.webp?format=webp" alt="ehHype"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">Why does Nick use Yunite?</div>
+                        <div class="faq-answer">
+                            <p>Nick uses Yunite to help prevent griefers, as it hides the custom matchmaking code. <img src="https://cdn.discordapp.com/emojis/790794998299361303.webp?format=webp" alt="ehHype"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">How can I talk in NickEh30's Discord?</div>
+                        <div class="faq-answer">
+                            <p>To chat in the <em>EhTeam</em>, you'll need to be a <strong>paid</strong> subscriber on one of <strong>NickEh30's</strong> channels: <a href="https://twitch.tv/nickeh30">Twitch</a>, <a href="https://youtube.com/@nickeh30">YouTube</a>, <a href="https://youtube.com/@nickeh30shorts">YouTube Shorts</a>. Once you're subscribed, link your <em>Discord</em> account to your <em>Twitch</em> or <em>YouTube</em> account to unlock chat access in the <em>EhTeam</em>. To link your twitch and discord account, first open settings, go to "Connections" click on "Twitch" and follow the prompts.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">When will NickEh30 go live?</div>
+                        <div class="faq-answer">
+                            <p>We don't know when Nick will go live! Keep an eye on the #updates channel in the discord... 👀</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">Can we play customs?</div>
+                        <div class="faq-answer">
+                            <p>NickEh30 will do customs whenever he feels ready! Please do not ask for them repeatedly, doing so for a can lead to a timeout! <img src="https://cdn.discordapp.com/emojis/790794276669227009.webp?size=48&quality=lossless&name=ehYay" alt="ehYay"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">How can I request an unban?</div>
+                        <div class="faq-answer">
+                            <p>To request an unban, send an email to <a href="mailto:nickeh30ehteam@gmail.com">nickeh30ehteam@gmail.com</a>. Please include your username, explanation, and anything else that would be helpful. <img src="https://cdn.discordapp.com/emojis/790794276669227009.webp?size=48&quality=lossless&name=ehYay" alt="ehYay"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">Is Trusted still used?</div>
+                        <div class="faq-answer">
+                            <p>Nick is not reading applications for the Trusted system anymore, so don’t worry about submitting an application. <img src="https://cdn.discordapp.com/emojis/859804334224965673.webp?size=48&quality=lossless&name=ehOkay"> <img src="https://cdn.discordapp.com/emojis/791107100004581376.webp?size=48&quality=lossless&name=ehTeam"></p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" aria-expanded="false">Other Questions?</div>
+                        <div class="faq-answer">
+                            <p>Ask in the #help channel in the discord, or ask a trusted member for help! <img src="https://cdn.discordapp.com/emojis/790794276669227009.webp?size=48&quality=lossless&name=ehYay" alt="ehYay"></p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <p class="footer-text">Made with love by TheCoolDoggo. Go out into the world and create something amazing 🤍 <br> Thanks to ItssJenn for help with the UI!</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach(item => {
+                const question = item.querySelector(".faq-question");
+                const answer = item.querySelector(".faq-answer");
+
+                question.addEventListener("click", () => {
+                    const isVisible = answer.classList.contains("visible");
+                    question.setAttribute("aria-expanded", !isVisible);
+                    if (isVisible) {
+                        answer.style.maxHeight = null;
+                        answer.style.opacity = 0;
+                        answer.style.padding = "0 10px";
+                        setTimeout(() => {
+                            answer.classList.remove("visible");
+                        }, 250);
+                    } else {
+                        answer.classList.add("visible");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        answer.style.opacity = 1;
+                        answer.style.padding = "10px";
+                    }
+                });
+            });
+
+            const fadeInElements = document.querySelectorAll(".fade-in");
+            fadeInElements.forEach(element => {
+                element.classList.add("visible");
+            });
+        });
+    </script>
+</body>
+</html>
